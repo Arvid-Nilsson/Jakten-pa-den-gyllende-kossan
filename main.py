@@ -1,11 +1,13 @@
-room = 0
+import rooms as r
+
+Room = 0
 
 while True:
-    if room == 0:
-        startRoom0()
-    elif room == 1:
-        startRoom1()
-    elif room == 2:
-        startRoom2()
-    elif room == 3:
-        startRoom3()
+    if Room == 0:
+        Room = r.Room0()
+    elif Room == 1:
+        Room = r.Room1()
+    elif Room == 2:
+        Room =r.Room2()
+    elif Room == 3:
+        Room = r.Room3()
