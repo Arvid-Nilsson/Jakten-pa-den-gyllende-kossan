@@ -1,13 +1,14 @@
 import rooms as r
-
-Room = 0
+ 
+Room = "Entre"
 
 while True:
-    if Room == 0:
-        Room = r.Room0()
-    elif Room == 1:
-        Room = r.Room1()
-    elif Room == 2:
-        Room =r.Room2()
-    elif Room == 3:
-        Room = r.Room3()
+    Room = Room.lower()
+    if "entre" in Room:
+        Room = r.Entre()
+    elif "hall" in Room:
+        Room = r.Hall()
+    elif "guldtoalett" in Room:
+        Room =r.Guldtoalett()
+    elif "slutrum" in Room:
+        Room = r.Slutrum()
