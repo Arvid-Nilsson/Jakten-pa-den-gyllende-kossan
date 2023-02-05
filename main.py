@@ -1,5 +1,8 @@
 import rooms as r
+from module import ResetInventory
  
+ResetInventory()
+
 Room = "Entre"
 
 while True:
