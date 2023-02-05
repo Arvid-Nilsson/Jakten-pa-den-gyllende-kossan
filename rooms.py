@@ -1,3 +1,5 @@
+from module import GiveBucket
+
 def Entre():
     NextRoom = input("du är i Entren vilket rum vill du gå till?")
     return NextRoom
