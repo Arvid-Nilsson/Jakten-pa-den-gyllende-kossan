@@ -31,21 +31,33 @@ def CheckBucket():
             return False
 
 #TODO: Maybe use a CLI to take button inputs rather than typing it.
-def Choices(Situation, Choices):
-    
-    print(Situation)
+def Choices(Situation, Options):
+    Output = Situation
 
-    ChoicesAmount = len(Choices)
+    for index, n in enumerate(Options, 1):
 
-    print(f"Du har {ChoicesAmount} val")
-
-    for index, n in enumerate(Choices):
-
-        if index == 0:
-            print(f"Vill du {n}?\n")
+        if index == 1:
+            Output += f"\nVill du {n} skriv {index}?\n"
         
         else:
-            print(f"Eller vill du {n}?\n")
+            Output += f"Eller vill du {n} skriv {index}?\n"
+
+    choice = input(Output)
+
+    try:
+        choice = int(choice)
+
+    except:
+        ChoseAgain(Situation, Options)
+
+    if choice in range(1, len(Options)):
+        return choice
+    else:
+        ChoseAgain(Situation, Options)
+
+def ChoseAgain(Situation, Options):
+    print(f"\nInmatningen måste vara ett heltal mellan 1 och {len(Options)}, ", end="")
+    Choices(Situation, Options)
 
 
 Choices("testing", [8, 5, "67", "hejsan"])
