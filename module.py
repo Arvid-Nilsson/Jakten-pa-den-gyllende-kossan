@@ -29,3 +29,23 @@ def CheckBucket():
             return True
         else:
             return False
+
+#TODO: Maybe use a CLI to take button inputs rather than typing it.
+def Choices(Situation, Choices):
+    
+    print(Situation)
+
+    ChoicesAmount = len(Choices)
+
+    print(f"Du har {ChoicesAmount} val")
+
+    for index, n in enumerate(Choices):
+
+        if index == 0:
+            print(f"Vill du {n}?\n")
+        
+        else:
+            print(f"Eller vill du {n}?\n")
+
+
+Choices("testing", [8, 5, "67", "hejsan"])
