@@ -1,4 +1,5 @@
-from module import GiveBucket
+#know its risky but we know whats in module
+from module import *
 
 def Entre():
     NextRoom = input("du är i Entren vilket rum vill du gå till?")
