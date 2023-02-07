@@ -1,4 +1,5 @@
 import json
+import time
 
 def ResetInventory():
     inventory = {"Zejd": []}
@@ -41,6 +42,8 @@ def Choices(Situation, Options):
             
         else:
             Output += f"Eller vill du {n} skriv {index}?\n"
+    
+        time.sleep(.5)
 
     while True:
         choice = input(Output)
