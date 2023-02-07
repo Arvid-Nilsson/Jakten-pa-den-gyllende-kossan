@@ -30,7 +30,7 @@ def CheckBucket():
         else:
             return False
 
-#TODO: Maybe use a CLI to take button inputs rather than typing it.
+# TODO: Maybe use a CLI to take button inputs rather than typing it.
 def Choices(Situation, Options):
     Output = Situation
     
@@ -52,7 +52,7 @@ def Choices(Situation, Options):
             print(f"\nInmatningen måste vara ett heltal mellan 1 och {len(Options)}, ", end="")
             continue
 
-        if choice in range(1, len(Options)):
+        if choice in range(1, len(Options) + 1):
             return (choice - 1)
         else:
             print(f"\nInmatningen måste vara ett heltal mellan 1 och {len(Options)}, ", end="")

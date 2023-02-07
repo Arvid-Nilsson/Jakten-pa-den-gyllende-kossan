@@ -1,4 +1,4 @@
-#know its risky but we know whats in module
+# know its risky but we know whats in module
 from module import *
 
 def Entre():
@@ -10,8 +10,22 @@ def Hall():
     return NextRoom
 
 def Guldtoalett():
-    NextRoom = input("du är i Guldtoaleten vilket rum vill du gå till?")
-    return NextRoom
+    
+    while True:
+    
+        Decision = Choices("Du är i Guldtoalleten, vad vill du göra?", ["gå till ett annat rum", "kolla runt"])
+        
+        if Decision == 0:
+            
+            Decision = Choices("Du tänker gå till ett annan rum, vilken?", ["gå tillbaka till hallen", "ångra dig"])
+
+            if Decision == 0:
+
+                return "hall"
+            
+            elif Decision == 1:
+
+                break
 
 def Slutrum():
     NextRoom = input("du är i Slutrumet vilket rum vill du gå till?")

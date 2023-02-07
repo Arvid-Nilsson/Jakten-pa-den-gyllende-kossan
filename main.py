@@ -19,3 +19,6 @@ while True:
         
     elif "slutrum" in Room:
         Room = r.Slutrum()
+    
+    elif "quit" in Room:
+        break
