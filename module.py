@@ -53,7 +53,7 @@ def Choices(Situation, Options):
             continue
 
         if choice in range(1, len(Options)):
-            return choice
+            return (choice - 1)
         else:
             print(f"\nInmatningen måste vara ett heltal mellan 1 och {len(Options)}, ", end="")
             continue
