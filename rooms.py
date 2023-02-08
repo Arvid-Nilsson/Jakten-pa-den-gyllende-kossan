@@ -39,5 +39,13 @@ def Guldtoalett():
 
 
 def Slutrum():
-    NextRoom = input("du är i Slutrumet vilket rum vill du gå till?")
-    return NextRoom
+    
+    Decision = Choices("Du kommer in till ett stort rum, väggarna så höga att du inte ser taket. Vad gör du?", ["vända och går tillbaka till hallen", "kolla runt"])
+
+    if Decision == 0:
+        return "hall"
+
+    Decision = Choices("När du tittar runt ser du en höjd platform och en trappa som leder upp till platformen, du tittar ännu närmare och ser en mörk skugga uppe på platformen. Vad gör du?", ["vända tillbaka och gå till hallen", "gå upp för trappan"])    
+
+    if Decision == 0:
+        return "hall"
