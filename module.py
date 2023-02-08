@@ -28,6 +28,7 @@ def CheckBucket():
 
         if "bucket" in inventory:
             return True
+            
         else:
             return False
 
