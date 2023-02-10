@@ -1,4 +1,5 @@
 import json
+import os
 
 def ResetInventory():
     inventory = {"Zejd": []}
@@ -27,6 +28,7 @@ def CheckBucket():
 
         if "bucket" in inventory:
             return True
+            
         else:
             return False
 
@@ -53,7 +55,9 @@ def Choices(Situation, Options):
             continue
 
         if choice in range(1, len(Options) + 1):
+            os.system("clear")
             return (choice - 1)
+
         else:
             print(f"\nInmatningen måste vara ett heltal mellan 1 och {len(Options)}, ", end="")
             continue
