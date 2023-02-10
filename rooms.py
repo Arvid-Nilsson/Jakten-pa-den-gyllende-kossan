@@ -34,7 +34,10 @@ def Entre():
 
 def Hall():
     while True:
-        Decision = Choices("\nDu befinner dig i hallen, vad gör du?", ["Vandra på till rummet till höger", "Gå til rummet till vänster"])
+        Decision = Choices("\nDu befinner dig i hallen, vad gör du?", ["Vända tillbaka till entrén", "Gå til rummet till höger"])
+
+        if Decision == 0:
+            return "Entre"
         
    
     
