@@ -50,7 +50,6 @@ def Hall():
             elif Decision == 1:
                 Decision = None
 
-    
 def Guldtoalett(): 
     """Navigation in the golden bathroom room"""
     while True:
@@ -74,7 +73,6 @@ def Guldtoalett():
             
             else:
                 print("\nDu hittade inte något nytt.")
-
 
 def Slutrum():
     """Navigation in the end room"""
