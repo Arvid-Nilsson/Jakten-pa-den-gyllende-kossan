@@ -39,7 +39,6 @@ def CheckBucket():
         else:
             return False
 
-# TODO: Maybe use a CLI to take button inputs rather than typing it.
 def Choices(Situation, Options):
     """Lets user pick between options. Takes two arguments a string that is used as prompt and a list of options"""
 
