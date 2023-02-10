@@ -2,31 +2,31 @@ import json
 import os
 
 def ResetInventory():
-    inventory = {"Zejd": []}
+    Inventory = {"Zejd": []}
     
-    with open("inventory.json", "w") as f:
-        f.write(json.dumps(inventory))
+    with open("inventory.json", "w") as F:
+        F.write(json.dumps(Inventory))
 
 
 def GiveBucket():
-    with open("inventory.json", "r") as f:
-        data = json.load(f)
+    with open("inventory.json", "r") as F:
+        Data = json.load(F)
 
-    inventory = data["Zejd"]
+    Inventory = Data["Zejd"]
 
-    if "bucket" not in inventory:
-        inventory.append("bucket")
+    if "bucket" not in Inventory:
+        Inventory.append("bucket")
 
-    with open("inventory.json", "w") as f:
-        f.write(json.dumps(data))
+    with open("inventory.json", "w") as F:
+        F.write(json.dumps(Data))
 
 
 def CheckBucket():
-    with open("inventory.json", "r") as f:
-        data = json.load(f)
-        inventory = data["Zejd"]
+    with open("inventory.json", "r") as F:
+        Data = json.load(F)
+        Inventory = Data["Zejd"]
 
-        if "bucket" in inventory:
+        if "bucket" in Inventory:
             return True
             
         else:
@@ -36,27 +36,27 @@ def CheckBucket():
 def Choices(Situation, Options):
     Output = Situation
     
-    for index, n in enumerate(Options, 1):
+    for Index, N in enumerate(Options, 1):
 
-        if index == 1:
-            Output += f"\nVill du {n} skriv {index}?\n"
+        if Index == 1:
+            Output += f"\nVill du {N} skriv {Index}?\n"
             
         else:
-            Output += f"Eller vill du {n} skriv {index}?\n"
+            Output += f"Eller vill du {N} skriv {Index}?\n"
     
     while True:
-        choice = input(Output)
+        Choice = input(Output)
 
         try:
-            choice = int(choice)
+            Choice = int(Choice)
 
         except:
             print(f"\nInmatningen måste vara ett heltal mellan 1 och {len(Options)}, ", end="")
             continue
 
-        if choice in range(1, len(Options) + 1):
+        if Choice in range(1, len(Options) + 1):
             os.system("clear")
-            return (choice - 1)
+            return (Choice - 1)
 
         else:
             print(f"\nInmatningen måste vara ett heltal mellan 1 och {len(Options)}, ", end="")

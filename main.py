@@ -1,24 +1,25 @@
 import rooms as r
 from module import ResetInventory
  
-ResetInventory()
+if __name__ == "__main__":
+    ResetInventory()
 
-Room = "Entre"
+    Room = "Entre"
 
-while True:
-    Room = Room.lower()
+    while True:
+        Room = Room.lower()
 
-    if "entre" in Room:
-        Room = r.Entre()
+        if "entre" in Room:
+            Room = r.Entre()
 
-    elif "hall" in Room:
-        Room = r.Hall()
+        elif "hall" in Room:
+            Room = r.Hall()
 
-    elif "guldtoalett" in Room:
-        Room =r.Guldtoalett()
+        elif "guldtoalett" in Room:
+            Room =r.Guldtoalett()
+            
+        elif "slutrum" in Room:
+            Room = r.Slutrum()
         
-    elif "slutrum" in Room:
-        Room = r.Slutrum()
-    
-    elif "quit" in Room:
-        break
+        elif "quit" in Room:
+            break
