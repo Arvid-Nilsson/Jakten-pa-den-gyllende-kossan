@@ -46,7 +46,9 @@ def Hall():
 
                 return "Guldtoalett"
             
-            
+            elif Decision == 1:
+
+                Decision = None
 
     
 def Guldtoalett():
