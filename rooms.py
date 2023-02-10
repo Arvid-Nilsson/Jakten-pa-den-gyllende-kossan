@@ -33,9 +33,11 @@ def Entre():
                     return "entre"
 
 def Hall():
-    NextRoom = input("du är i Hallen vilket rum vill du gå till?")
-    return NextRoom
-
+    while True:
+        Decision = Choices("\nDu befinner dig i hallen, vad gör du?", ["Vandra på till rummet till höger", "Gå til rummet till vänster"])
+        
+   
+    
 def Guldtoalett():
     
     while True:
