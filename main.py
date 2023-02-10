@@ -4,6 +4,8 @@ from module import ResetInventory
 if __name__ == "__main__":
     ResetInventory()
 
+    r.IntoScene()
+
     Room = "Entre"
 
     while True:

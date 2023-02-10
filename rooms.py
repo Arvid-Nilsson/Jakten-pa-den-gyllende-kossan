@@ -1,25 +1,34 @@
 # know its risky but we know whats in module
 from module import *
+import time
    
 def Entre():
     while True:
         Decision = Choices("\nDu är i entrén, vad vill du göra?", ["gå till hallen", "titta runt i rummet"])
+        
         if Decision == 0:
             return "hall" 
+        
         elif Decision == 1:
             Decision = Choices("\nDu väljer att titta runt i rummet, vad vill du göra?", ["gå till höger", "gå till vänster"])
+            
             if Decision == 0:
                 Decision = Choices("\nDu väljer att gå och titta till höger i entrén. På den mossiga väggen ser du något som liknar en knapp, trycker du på den?", ["trycka på den", "inte göra det, och återvända till entén"])
+                
                 if Decision == 0:
                     print("Knappen du trycker på avlöser en fallucka under sig och du faller till din död")
                     return "quit"
+                
                 elif Decision == 1: 
                     return "entre"
+            
             elif Decision == 1:
                 Decision = Choices("\nDu väljer att gå och titta till vänster i entrén. Du finner dig titta på en mossig stenvägg. Vad vill du göra?", ["undersöka det närmare", "återvända"])
+                
                 if Decision == 0:
                     print("Du tyder på väggen 'Procrastination will reign supreme' och du börjar rysa. Det är inte första gången någon besöker detta tempel. Du väljer att återvända till entren.")
                     return "entre"
+                
                 elif Decision == 1:
                     return "entre"
 
@@ -92,8 +101,15 @@ def Slutrum():
                 text = f.readlines()
 
                 for line in text:
+                    time.sleep(2)
                     print(line)
 
             return "quit"
-                 
 
+def IntoScene():
+    with open("introscene.txt", "r") as f:
+                text = f.readlines()
+
+                for line in text:
+                    time.sleep(2)
+                    print(line)
