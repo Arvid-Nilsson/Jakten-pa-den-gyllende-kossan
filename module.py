@@ -65,7 +65,7 @@ def Choices(Situation, Options):
 
         #checks if user option is in range of accepted options
         if Choice in range(1, len(Options) + 1):
-            os.system("clear")
+            os.system("cls")
             return (Choice - 1)
 
         else:
