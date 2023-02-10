@@ -39,7 +39,6 @@ def CheckBucket():
         else:
             return False
 
-# TODO: Maybe use a CLI to take button inputs rather than typing it.
 def Choices(Situation, Options):
     """Lets user pick between options. Takes two arguments a string that is used as prompt and a list of options"""
 
@@ -66,7 +65,7 @@ def Choices(Situation, Options):
 
         #checks if user option is in range of accepted options
         if Choice in range(1, len(Options) + 1):
-            os.system("clear")
+            os.system("cls")
             return (Choice - 1)
 
         else:

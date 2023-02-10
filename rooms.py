@@ -3,6 +3,7 @@ from module import *
 import time
    
 def Entre():
+    """Navigation in entrence room"""
     while True:
         Decision = Choices("\nDu är i entrén, vad vill du göra?", ["gå till hallen", "titta runt i rummet"])
         
@@ -33,30 +34,24 @@ def Entre():
                     return "entre"
 
 def Hall():
-    
+    """Navigation in hallway room"""
     while True:
-        
         Decision = Choices("\nDu befinner dig i hallen, vad gör du?", ["Gå till höger rum", "Gå till vänster rum"])
 
         if Decision == 0:
-            
             return "guldtoalett"
         
         if Decision == 1:
-            
             Decision = Choices("\nDu står vid dörren till det nya rummet, vad gör du nu?", ["Öppna dörren", "ångra val"])
 
             if Decision == 0:
-
                 return "slutrum"
             
             elif Decision == 1:
-
                 Decision = None
 
-    
-def Guldtoalett():
-    
+def Guldtoalett(): 
+    """Navigation in the golden bathroom room"""
     while True:
         Decision = Choices("\nDu är i Guldtoalleten, vad vill du göra?", ["gå till ett annat rum", "kolla runt"])
         
@@ -79,8 +74,8 @@ def Guldtoalett():
             else:
                 print("\nDu hittade inte något nytt.")
 
-
 def Slutrum():
+    """Navigation in the end room"""
     Decision = Choices("Du kommer in till ett stort rum, väggarna så höga att du inte ser taket. Vad gör du?", ["vända och gå tillbaka till hallen", "kolla runt"])
 
     if Decision == 0:
@@ -121,6 +116,7 @@ def Slutrum():
             return "quit"
 
 def IntoScene():
+    """Intro scenery with text appearing"""
     with open("introscene.txt", "r") as f:
                 text = f.readlines()
 
