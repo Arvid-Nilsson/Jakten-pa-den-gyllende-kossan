@@ -2,6 +2,8 @@ import json
 import os
 
 def ResetInventory():
+    """Resets file intentory.json"""
+
     Inventory = {"Zejd": []}
     
     with open("inventory.json", "w") as F:
@@ -9,6 +11,8 @@ def ResetInventory():
 
 
 def GiveBucket():
+    """Adds bucket to Zejd in inventory.json"""
+
     with open("inventory.json", "r") as F:
         Data = json.load(F)
 
@@ -17,11 +21,14 @@ def GiveBucket():
     if "bucket" not in Inventory:
         Inventory.append("bucket")
 
+    #prints modified object to inventory.json
     with open("inventory.json", "w") as F:
         F.write(json.dumps(Data))
 
 
 def CheckBucket():
+    """Checks if zejd has bucket in inventory.json"""
+
     with open("inventory.json", "r") as F:
         Data = json.load(F)
         Inventory = Data["Zejd"]
@@ -34,6 +41,8 @@ def CheckBucket():
 
 # TODO: Maybe use a CLI to take button inputs rather than typing it.
 def Choices(Situation, Options):
+    """Lets user pick between options. Takes two arguments a string that is used as prompt and a list of options"""
+
     Output = Situation
     
     for Index, N in enumerate(Options, 1):
@@ -47,6 +56,7 @@ def Choices(Situation, Options):
     while True:
         Choice = input(Output)
 
+        #checks if user option is a whole number
         try:
             Choice = int(Choice)
 
@@ -54,6 +64,7 @@ def Choices(Situation, Options):
             print(f"\nInmatningen måste vara ett heltal mellan 1 och {len(Options)}, ", end="")
             continue
 
+        #checks if user option is in range of accepted options
         if Choice in range(1, len(Options) + 1):
             os.system("clear")
             return (Choice - 1)
