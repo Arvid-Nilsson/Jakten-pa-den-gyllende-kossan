@@ -41,7 +41,13 @@ def Hall():
         
         if Decision == 1:
             Decision = Choices("\nDu står vid dörren till det nya rummet, vad gör du nu?", ["Öppna dörren", "ångra val"])
-   
+
+            if Decision == 0:
+
+                return "Guldtoalett"
+            
+            
+
     
 def Guldtoalett():
     
