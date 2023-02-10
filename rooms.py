@@ -36,11 +36,11 @@ def Hall():
     
     while True:
         
-        Decision = Choices("\nDu befinner dig i hallen, vad gör du?", ["Vända tillbaka till entrén", "Gå til rummet till höger"])
+        Decision = Choices("\nDu befinner dig i hallen, vad gör du?", ["Gå till höger rum", "Gå till vänster rum"])
 
         if Decision == 0:
             
-            return "entre"
+            return "guldtoalett"
         
         if Decision == 1:
             
@@ -48,7 +48,7 @@ def Hall():
 
             if Decision == 0:
 
-                return "guldtoalett"
+                return "slutrum"
             
             elif Decision == 1:
 
